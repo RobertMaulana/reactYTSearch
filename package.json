@@ -1,9 +1,6 @@
 {
   "name": "react-starter",
   "version": "0.1.0",
-  "engines": {
-    "node": "8.2.1"
-  },
   "private": true,
   "dependencies": {
     "lodash": "^4.17.4",
