@@ -15,7 +15,6 @@
     "react-scripts": "1.0.10"
   },
   "scripts": {
-    "heroku-postbuild": "npm start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
