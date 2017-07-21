@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import YTSearch from 'youtube-api-search';
+import './style/style.css';
 
 import { SearchBar } from './components/search_bar';
 import { VideoDetail } from './components/video_detail';
@@ -17,8 +18,11 @@ class App extends Component {
       videos: [],
       selectedVideo: null
     };
+    this.onSearchChange('surfboard');
+  }
 
-    YTSearch({ key: API_KEY, term: 'surfboard' }, ( videos ) => {
+  onSearchChange(term) {
+    YTSearch({ key: API_KEY, term }, ( videos ) => {
       this.setState({
         videos,
         selectedVideo: videos[0]
@@ -30,7 +34,8 @@ class App extends Component {
     const { videos, selectedVideo } = this.state;
     return (
       <div className="container">
-        <SearchBar />
+        <SearchBar
+          onSearchChange={term => this.onSearchChange(term)}/>
         <div className="row">
           <VideoDetail video={ selectedVideo }/>
           <VideoList

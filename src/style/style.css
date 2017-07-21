@@ -1,0 +1,19 @@
+.search-bar {
+    margin: 15px;
+    text-align: center;
+}
+
+.search-bar input{
+  height: 30px;
+  width: 60%
+}
+
+.list-group-item:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.details {
+  border: 1px solid #eee;
+  padding: 5px
+}
